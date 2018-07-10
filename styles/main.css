@@ -1,12 +1,24 @@
 #loading {
   position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: whitesmoke;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #f0f0f0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 50%;
+  height: auto;
+  background-attachment: #e2e2e2;
+  cursor: pointer;
+  font-size: 20px;
+  color: #666666;
+  padding: 20px 0
+  /* border: 1px solid */
+}
+
+#loading:hover {
+  background: #ddd;
+  color: darkcyan
 }
