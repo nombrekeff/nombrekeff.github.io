@@ -40,7 +40,7 @@
 			<li class="dropdown">
 				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="global.html#ALERT">ALERT</a></li><li><a href="global.html#CRITICAL">CRITICAL</a></li><li><a href="global.html#debug">debug</a></li><li><a href="global.html#DEBUG">DEBUG</a></li><li><a href="global.html#EMERGENCY">EMERGENCY</a></li><li><a href="global.html#ERROR">ERROR</a></li><li><a href="global.html#formater">formater</a></li><li><a href="global.html#getLogger">getLogger</a></li><li><a href="global.html#INFO">INFO</a></li><li><a href="global.html#join">join</a></li><li><a href="global.html#logging">logging</a></li><li><a href="global.html#NOTICE">NOTICE</a></li><li><a href="global.html#splitAndJoin">splitAndJoin</a></li><li><a href="global.html#warAction">warAction</a></li><li><a href="global.html#WARNING">WARNING</a></li>
+					<li><a href="global.html#ALERT">ALERT</a></li><li><a href="global.html#CRITICAL">CRITICAL</a></li><li><a href="global.html#DEBUG">DEBUG</a></li><li><a href="global.html#debug">debug</a></li><li><a href="global.html#EMERGENCY">EMERGENCY</a></li><li><a href="global.html#ERROR">ERROR</a></li><li><a href="global.html#getLogger">getLogger</a></li><li><a href="global.html#INFO">INFO</a></li><li><a href="global.html#join">join</a></li><li><a href="global.html#NOTICE">NOTICE</a></li><li><a href="global.html#splitAndJoin">splitAndJoin</a></li><li><a href="global.html#warAction">warAction</a></li><li><a href="global.html#WARNING">WARNING</a></li>
 				</ul>
 			</li>
 			
@@ -93,18 +93,22 @@
 
 
     <section class="readme-section">
-        <article><h1>Loggin' JS</h1><p>A little customizable logger for NodeJS. Log to the <strong>console</strong>, to a <strong>file</strong>, to a <strong>remote service</strong> or create a custom one.</p>
+        <article><h1>Loggin' JS</h1><p><img src="https://github.com/nombrekeff/loggin-js/blob/master/examples/example-output-formater.PNG?raw=true" alt="Preview"></p>
+<p><a href="https://www.npmjs.com/package/loggin-js"><img src="https://img.shields.io/circleci/project/github/nombrekeff/loggin-js.svg" alt="CircleCI"></a>
+<a href="https://www.codacy.com/app/manoloedge96/loggin-js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nombrekeff/loggin-js&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/2ffe3b2f71c74210987436b935c06720" alt="Codacy Badge"></a>
+<a href="https://www.npmjs.com/package/loggin-js"><img src="https://img.shields.io/npm/dt/loggin-js.svg" alt="npm"></a>
+<a href="https://david-dm.org/nombrekeff/loggin-js?view=tree"><img src="https://img.shields.io/david/nombrekeff/loggin-js.svg" alt="David"></a>  </p>
+<p><a href="https://nodei.co/npm/loggin-js/"><img src="https://nodei.co/npm/loggin-js.png" alt="NPM"></a>
+<a href="https://twitter.com/intent/user?screen_name=keff39006469"><img src="https://img.shields.io/twitter/follow/keff39006469.svg?style=social&amp;label=Follow" alt="Twitter Follow"></a>  </p>
+<p>A little customizable logger for NodeJS.<br>Log to the <strong>console</strong>, to a <strong>file</strong>, to a <strong>remote service</strong> or create a custom one.</p>
 <blockquote>
 <p>Based on standard <strong>RFC3164</strong></p>
 </blockquote>
-<p><a href="https://badge.fury.io/js/loggin-js"><img src="https://badge.fury.io/js/loggin-js.svg" alt="npm version"></a> <a href="https://www.npmjs.com/package/loggin-js"><img src="https://img.shields.io/npm/dm/loggin-js.svg?colorB=blue" alt="npm"></a></p>
-<p><a href="https://www.npmjs.com/package/loggin-js"><img src="https://img.shields.io/circleci/project/github/nombrekeff/loggin-js.svg" alt="CircleCI"></a>
-<a href="https://david-dm.org/nombrekeff/loggin-js?view=tree"><img src="https://img.shields.io/david/nombrekeff/loggin-js.svg" alt="David"></a>
-<a href="https://www.codacy.com/app/manoloedge96/loggin-js?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=nombrekeff/loggin-js&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/2ffe3b2f71c74210987436b935c06720" alt="Codacy Badge"></a></p>
 <h3>References</h3><ul>
 <li><a href="https://github.com/nombrekeff/logging-js/wiki/Get-Started">Get started</a></li>
 <li><a href="https://github.com/nombrekeff/logging-js/wiki/Basic-Usage">Basic Usage</a></li>
 <li><a href="https://nombrekeff.github.io/loggin-js/">Wiki</a></li>
+<li><a href="/examples">Examples</a></li>
 <li><a href="#Collaborating">Collaborating</a></li>
 </ul>
 <h3>Get-Started</h3><ul>
@@ -113,12 +117,12 @@
 <li><p>Test it works, and see how it looks:</p>
 <pre class="prettyprint source lang-bash"><code>node run examples/basic-example.js</code></pre></li>
 <li><p>Using in node</p>
-<pre class="prettyprint source lang-js"><code>// Require the logging library
+<pre class="prettyprint source lang-javascript"><code>// Require the logging library
 const logging = require('loggin-js');</code></pre></li>
 </ul>
 <h3>Basic-Usage</h3><h5>Basic Example</h5><p>In this example we create a new logger with a severity of DEBUG, and we set color to true.<br>This means it will output any log to the console as DEBUG englobes all other severities</p>
 <p>We create it making use of the <code>logging.getLogger(options?)</code> method that creates a logger based on the options.<br><em>There are other ways of creating a Logger as described in the examples and docs</em></p>
-<pre class="prettyprint source lang-js"><code>// Require the logging library
+<pre class="prettyprint source lang-javascript"><code>// Require the logging library
 const logging = require('loggin-js');
 
 // Shortcuts
@@ -150,7 +154,7 @@ logger.notice(['notice', 'notice']);
 // If enabled set to false logs will not be output
 logger.setEnabled(false);</code></pre><h5>File Logging Example</h5><p>Log to files instead of the console</p>
 <p>We create it making use of the <code>FileLogger</code> class.  </p>
-<pre class="prettyprint source lang-js"><code>// Require the logging library
+<pre class="prettyprint source lang-javascript"><code>// Require the logging library
 const logging = require('loggin-js');
 
 // Shortcut for the severity constants
@@ -186,14 +190,14 @@ logger.error('Logging a error log', new Error('An error'));
 logger.warning('Logging a warning log');
 logger.notice('Logging a notice log');
 logger.alert('Logging a error log');</code></pre><h5>Custom Formatter Example</h5><p>Custom formatter, customize the output of the log </p>
-<pre class="prettyprint source lang-js"><code>const logging = require('loggin-js');
+<pre class="prettyprint source lang-javascript"><code>const logging = require('loggin-js');
 const logger = logging.getLogger({
   level: logging.Severity.DEBUG,
   color: true,
 
   /**
-   * You can also use a custom formater if the default one does not satisfy your needs.
-   * In the formater you can access all log properties and you can also set the 
+   * You can also use a custom formatter if the default one does not satisfy your needs.
+   * In the formatter you can access all log properties and you can also set the 
    * color of some segments of the log by using &lt;%L> where L is one of:
    *  - r red
    *  - g green
@@ -204,7 +208,7 @@ const logger = logging.getLogger({
    *  - m magenta
    *  - (nnn) a number between 0-255 # not implemented yet
    */
-  formater: '[{time.toLocaleString}] - &lt;%m{user}> | {severityStr} | {message} - {JSON.stringify(data)}'
+  formatter: '[{time.toLocaleString}] - &lt;%m{user}> | {severityStr} | {message} - {JSON.stringify(data)}'
 });
 
 // Set user to root
@@ -269,7 +273,7 @@ logger.error('There was an &lt;%rERROR>'); </code></pre><h3>Collaborating</h3><p
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2018-06-24T18:23:52+02:00
+		on 2018-07-10T23:43:39+02:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
