@@ -15,6 +15,7 @@ body {
   width: 50%;
   height: auto;
   background-attachment: #e2e2e2;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 20px;
   color: #666666;
